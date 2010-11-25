@@ -1,4 +1,9 @@
 module RubyPsigate
+  
+  class RubyPsigateError < StandardError; end
+  class ConnectionError < RubyPsigateError; end
+  class RetriableConnectionError < RubyPsigateError; end
+  class CertVerificationFileMissingError < RubyPsigateError; end
     
   class Connection
     
